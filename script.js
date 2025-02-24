@@ -38,5 +38,40 @@ document.addEventListener("DOMContentLoaded", function() {
     // Event listener for sigil generation
     generateSigilBtn.addEventListener("click", function() {
         sigilOutput.textContent = generateSigil(sigilInput.value);
-    });
+    });// Ritual Customization Logic
+document.addEventListener("DOMContentLoaded", function () {
+    const ritualForm = document.getElementById("ritual-form");
+    if (ritualForm) {
+        ritualForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            const selectedPlanet = document.getElementById("planet").value;
+            const selectedElement = document.getElementById("element").value;
+            const selectedCrystal = document.getElementById("crystal").value;
+
+            document.getElementById("ritual-output").innerHTML = `
+                <h3>Customized Ritual:</h3>
+                <p><strong>Planet:</strong> ${selectedPlanet}</p>
+                <p><strong>Element:</strong> ${selectedElement}</p>
+                <p><strong>Crystal:</strong> ${selectedCrystal}</p>
+                <p>Use these correspondences to enhance your ritual focus.</p>
+            `;
+        });
+    }
+
+    // AI Sigil Generation Placeholder
+    const generateSigilBtn = document.getElementById("generate-sigil");
+    if (generateSigilBtn) {
+        generateSigilBtn.addEventListener("click", function () {
+            alert("AI Sigil Generation Coming Soon!");
+        });
+    }
+
+    // Banishing Ritual
+    const banishingBtn = document.getElementById("banish-btn");
+    if (banishingBtn) {
+        banishingBtn.addEventListener("click", function () {
+            alert("Performing banishing ritual... Feel the energy cleanse your space.");
+        });
+    }
+});
 });
