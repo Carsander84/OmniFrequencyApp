@@ -17,4 +17,4 @@ function findPlanetCorrespondence() {
 
     let planet = correspondences[word.toLowerCase()] || "Unknown";
     alert(`The planetary correspondence for '${word}' is: ${planet}`);
-      }
+}
